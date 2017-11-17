@@ -22,6 +22,4 @@ describe command('test_musicc.py') do
   its('exit_status') { should eq 0 }
   its('stdout') { should match(/Running time was/) }
   its('stderr') { should match(/OK/) }
-
 end
-
