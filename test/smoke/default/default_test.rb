@@ -5,14 +5,23 @@
 # The Inspec reference, with examples and extensive documentation, can be
 # found at http://inspec.io/docs/reference/resources/
 
-unless os.windows?
-  # This is an example test, replace with your own test.
-  describe user('root'), :skip do
-    it { should exist }
-  end
+# Check the run MUSiCC script is installed
+describe command('which run_musicc.py') do
+  its('exit_status') { should eq 0 }
+  its('stdout') { should match %r{/run_musicc.py} }
 end
 
-# This is an example test, replace it with your own test.
-describe port(80), :skip do
-  it { should_not be_listening }
+# Check that MUSiCC test script is installed
+describe command('which test_musicc.py') do
+  its('exit_status') { should eq 0 }
+  its('stdout') { should match %r{/test_musicc.py} }
 end
+
+# Run the MUSiCC test script
+describe command('test_musicc.py') do
+  its('exit_status') { should eq 0 }
+  its('stdout') { should match(/Running time was/) }
+  its('stderr') { should match(/OK/) }
+
+end
+
