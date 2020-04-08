@@ -22,4 +22,3 @@ describe command('test_musicc.py') do
   its('stdout') { should match(/Running time was/) }
   its('stderr') { should match(/OK/) }
 end
-
