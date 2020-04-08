@@ -21,7 +21,7 @@ pyenv_pip 'MUSiCC' do
 end
 
 # Workaround to allow non root user to run tests (they need to write to this dir)
-directory '/usr/local/lib/python2.7/dist-packages/musicc/examples/' do
+directory '/usr/local/pyenv/versions/2.7.17/lib/python2.7/site-packages/musicc/examples/' do
   mode 0777
 end
 
