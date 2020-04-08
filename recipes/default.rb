@@ -2,26 +2,21 @@
 # Cookbook:: MUSiCC
 # Recipe:: default
 #
-# Copyright:: 2017, The Authors, All Rights Reserved.
+# Copyright:: 2019, Eagle Genomics Ltd, All Rights Reserved.
 
 apt_update if node['platform_family'] == 'debian'
 build_essential 'install essential' do
   action :install
 end
 
-include_recipe 'poise-python'
-
-# install the Python runtime
-python_runtime '2' do
-  version '2.7'
-end
+include_recipe 'python_setup'
 
 # Need to specify this version otherwise MUSiCC will install but not run correctly
-python_package 'scikit-learn' do
+pyenv_pip 'scikit-learn' do
   version '0.17.1'
 end
 
-python_package 'MUSiCC' do
+pyenv_pip 'MUSiCC' do
   version node['MUSiCC']['version']
 end
 

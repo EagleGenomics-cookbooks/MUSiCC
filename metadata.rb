@@ -1,14 +1,13 @@
 name 'MUSiCC'
-maintainer 'Eagle Genomics'
+maintainer 'Eagle Genomics Ltd'
 maintainer_email 'chef@eaglegenomics.com'
-license 'Apache v2.0'
+license 'Apache-2.0'
 description 'Installs/Configures MUSiCC'
-long_description 'Installs/Configures MUSiCC'
-version '0.1.0'
-chef_version '>= 12.1' if respond_to?(:chef_version)
-
-issues_url 'https://github.com/EagleGenomics-cookbooks/MUSiCC/issues'
+long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
+chef_version '>= 14.10'
+supports 'ubuntu', '= 18.04'
 source_url 'https://github.com/EagleGenomics-cookbooks/MUSiCC'
-
+issues_url 'https://github.com/EagleGenomics-cookbooks/MUSiCC/issues'
+version '0.1.1'
 depends 'magic_shell'
-depends 'poise-python'
+depends 'python_setup'

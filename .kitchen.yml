@@ -1,20 +1,18 @@
 ---
 driver:
   name: docker
-  use_sudo: false
 
 provisioner:
   name: chef_zero
-  require_chef_omnibus: 12.19.36
-
+  product_version: '14.10'
+  product_name: chef
+  
 verifier:
   name: inspec
-  format: doc
-  sudo: true
   sudo_command: . /etc/profile;
 
 platforms:
-  - name: ubuntu-16.04
+  - name: ubuntu-18.04
 
 suites:
   - name: default
@@ -22,5 +20,5 @@ suites:
       - recipe[MUSiCC::default]
     verifier:
       inspec_tests:
-        - test/smoke/default
+        - test/integration/default
     attributes:

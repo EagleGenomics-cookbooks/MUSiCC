@@ -4,7 +4,6 @@
 
 # The Inspec reference, with examples and extensive documentation, can be
 # found at http://inspec.io/docs/reference/resources/
-
 # Check the run MUSiCC script is installed
 describe command('which run_musicc.py') do
   its('exit_status') { should eq 0 }
@@ -23,3 +22,4 @@ describe command('test_musicc.py') do
   its('stdout') { should match(/Running time was/) }
   its('stderr') { should match(/OK/) }
 end
+
