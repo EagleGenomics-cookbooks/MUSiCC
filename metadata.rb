@@ -12,4 +12,3 @@ source_url 'https://github.com/EagleGenomics-cookbooks/MUSiCC'
 
 depends 'magic_shell'
 depends 'poise-python'
-depends 'apt'

@@ -4,7 +4,7 @@
 #
 # Copyright:: 2017, The Authors, All Rights Reserved.
 
-include_recipe 'apt' if node['platform_family'] == 'debian'
+apt_update if node['platform_family'] == 'debian'
 build_essential 'install essential' do
   action :install
 end
