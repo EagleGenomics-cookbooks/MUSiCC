@@ -10,7 +10,6 @@ chef_version '>= 12.1' if respond_to?(:chef_version)
 issues_url 'https://github.com/EagleGenomics-cookbooks/MUSiCC/issues'
 source_url 'https://github.com/EagleGenomics-cookbooks/MUSiCC'
 
-depends 'build-essential'
 depends 'magic_shell'
 depends 'poise-python'
 depends 'apt'
