@@ -12,20 +12,20 @@ end
 include_recipe 'python_setup'
 
 pyenv_pip 'numpy' do
-  version '>=1.17.0'
+  version '1.17.0'
 end
 
 pyenv_pip 'scipy' do
-  version '>=1.3.0'
+  version '1.3.0'
 end
 
 # Need to specify this version otherwise MUSiCC will install but not run correctly
 pyenv_pip 'scikit-learn' do
-  version '>=0.21.3'
+  version '0.21.3'
 end
 
 pyenv_pip 'pandas' do
-  version '>=0.25.0'
+  version '0.25.0'
 end
 
 pyenv_pip 'MUSiCC' do
