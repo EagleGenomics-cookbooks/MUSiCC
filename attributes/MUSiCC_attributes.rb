@@ -1,2 +1,2 @@
-default['MUSiCC']['version'] = '1.0.2'
+default['MUSiCC']['version'] = '1.0.3'
 default['python']['version'] = '2.7.17'
